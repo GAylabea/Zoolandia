@@ -52,7 +52,7 @@ namespace Zoolandia
 
         // Lions
             PantheraLeo Lion = new PantheraLeo("Neka");
-            Lion.Name = "Neko";
+            Lion.Name = "Neka";
             Lion.legs = 4;
             Lion.habitat = "Open woodland, scrub, grassland";
             Lion.weight =  265; 
