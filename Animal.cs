@@ -2,25 +2,29 @@ using System;
 
 namespace Zoolandia
 {
-    public class Animal
-    {
-        // it would be an empty constructor if it did not have anything in the ()
+    public class Animal {
+         // This is the constructor. It would be an empty constructor if it did not have anything in the ()
         // using a constructor to get all our classes and dependencies
-        public Animal (string name)
+         public Animal (string name)
         {
+            //this sets the name - remember, the Name is different from name
             this.Name = name;
         }
+        public int legs { get; set; }
+        public string Name { get; set; }
+        public int weight { get; set; }
+        public string habitat { get; set; }
+        public bool carnivore { get; set; }
+        public double speed { get; set; }
+        public virtual void walk () {
+            Console.WriteLine("Animal class walk method"); 
+            speed = speed + (0.1 * legs);
+        }
 
-       //this is a PROPERTY
-        public string Name {get; set;} //property name = Name; the get/set allows us to do dot notation
-
-        //this is a METHOD; by making it virtual you can override the parent 
-        public virtual string Eat(int numberOfFoodz)  
-        {
-            return "YUM!";
+        public void sleep () {
+        Console.WriteLine("I am sleeping");
         }
     }
-
-
-
 }
+ 
+
